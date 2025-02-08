@@ -170,7 +170,7 @@ a{
     display: flex;
     align-items: center;
 }
-.promo_bg{
+.promo_bg {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -178,6 +178,16 @@ a{
     left: 0;
     z-index: 1;
     object-fit: cover;
+}
+
+/* Mobile-specific fix */
+@media (max-width: 768px) {
+    .promo_bg {
+        object-fit: contain;  /* Adjust the image size on small screens */
+        background-position: top center;  /* Center the image better on mobile */
+    }
+}
+
 }
 .promo_wrap{
     max-width: 590px;
